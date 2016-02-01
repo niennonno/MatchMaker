@@ -15,44 +15,68 @@ import ParseFacebookUtilsV4
 //import ParseFacebookUtils
 
 class ViewController: UIViewController {
-
     
-    @IBOutlet var button: FBSDKLoginButton!
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBAction func signin(sender: AnyObject) {
         
         let permissions = ["public_profile"]
-       
-        PFFacebookUtils.logInInBackgroundWithReadPermissions(permissions) {
         
+        PFFacebookUtils.logInInBackgroundWithReadPermissions(permissions) {
+            
             (user: PFUser?, error: NSError?) -> Void in
             
-            if let anError = error {
+            if let anError = error {1
                 print(anError)
             } else {
                 
-                if let aUser = user {
+                if let user = user {
                     
-                    print(aUser)
-                    
+                    if let interestedInWomen = user["interestedInWomen"] {
+                        
+                        self.performSegueWithIdentifier("logUserIn", sender: self)
+                        
+                    } else {
+                        
+                        self.performSegueWithIdentifier("showSignInScreen", sender: self)
+                        
+                    }
                 }
                 
             }
-        
+            
         }
         
         
-//        let button: FBSDKLoginButton = FBSDKLoginButton()
-//        self.button.readPermissions = permissions   
-        
-        // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+                
+        if let username = PFUser.currentUser()?.username {
+           
+            if let interestedInWomen = PFUser.currentUser()?["interestedInWomen"] {
+                
+                self.performSegueWithIdentifier("logUserIn", sender: self)
+                
+            } else {
+                
+                self.performSegueWithIdentifier("showSignInScreen", sender: self)
+                
+            }
 
+            
+        }
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
