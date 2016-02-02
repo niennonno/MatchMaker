@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     
     @IBAction func signin(sender: AnyObject) {
         
-        let permissions = ["public_profile"]
+        let permissions = ["public_profile", "email"]
         
         PFFacebookUtils.logInInBackgroundWithReadPermissions(permissions) {
             
@@ -50,7 +50,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+            
     }
     
     override func viewDidAppear(animated: Bool) {

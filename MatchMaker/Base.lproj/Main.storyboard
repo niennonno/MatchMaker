@@ -35,7 +35,7 @@
                                     <constraint firstAttribute="width" constant="96" id="WCX-BI-9v1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -75,7 +75,7 @@
                                     <constraint firstAttribute="width" constant="82" id="fXg-RX-Ysi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uFo-uR-R9i">
@@ -92,7 +92,7 @@
                                     <constraint firstAttribute="height" constant="21" id="qM5-NG-ZZG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="g11-Hh-Wa3">
@@ -114,7 +114,7 @@
                                     <constraint firstAttribute="width" constant="59" id="o8B-zi-qwz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Men" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uha-FY-cfo">
@@ -124,7 +124,7 @@
                                     <constraint firstAttribute="width" constant="34" id="w3m-bv-GUZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ua0-aU-ctx">
@@ -160,11 +160,12 @@
                     <connections>
                         <outlet property="interestedInWomen" destination="3Gg-1y-ba1" id="NUx-1v-CJG"/>
                         <outlet property="userImage" destination="uFo-uR-R9i" id="vzX-sI-hOI"/>
+                        <segue destination="Nni-E5-HAc" kind="show" identifier="loggingIn" id="ChC-4y-91z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cz8-b3-wUp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="769" y="643"/>
+            <point key="canvasLocation" x="787" y="653"/>
         </scene>
         <!--Swiping View Controller-->
         <scene sceneID="T9b-W1-eVA">
@@ -187,6 +188,11 @@
                                                 <segue destination="BYZ-38-t0r" kind="show" identifier="logOut" id="M1e-bk-QWh"/>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Contacts" id="Pba-ZX-g0w">
+                                            <connections>
+                                                <segue destination="Qbe-Ne-d1q" kind="show" id="2s0-Wl-nmk"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -204,7 +210,7 @@
                                     <constraint firstAttribute="height" constant="21" id="c6J-Ug-ZMM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -229,8 +235,52 @@
             </objects>
             <point key="canvasLocation" x="776" y="-44"/>
         </scene>
+        <!--Contacts Table View Controller-->
+        <scene sceneID="5Rm-3U-UyA">
+            <objects>
+                <tableViewController id="Qbe-Ne-d1q" customClass="ContactsTableViewController" customModule="MatchMaker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="PVu-NJ-Chv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="wvI-Wh-UeE">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Contacts" id="hPT-bE-WxQ">
+                                    <barButtonItem key="leftBarButtonItem" title="Back" id="PXW-o3-SRV">
+                                        <connections>
+                                            <segue destination="Nni-E5-HAc" kind="show" id="Zb7-9T-S05"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="3V7-6k-RoO">
+                                <rect key="frame" x="0.0" y="72" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3V7-6k-RoO" id="ijh-J1-RHW">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Qbe-Ne-d1q" id="KRF-mM-ltC"/>
+                            <outlet property="delegate" destination="Qbe-Ne-d1q" id="zhb-XB-qgc"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g0T-GC-97P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1409" y="-36"/>
+        </scene>
     </scenes>
     <resources>
         <image name="login_with_facebook.png" width="732" height="100"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ChC-4y-91z"/>
+    </inferredMetricsTieBreakers>
 </document>

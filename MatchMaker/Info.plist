@@ -12,6 +12,8 @@
 			</array>
 		</dict>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>To find people near you</string>
 	<key>FacebookAppID</key>
 	<string>671753349632658</string>
 	<key>FacebookDisplayName</key>

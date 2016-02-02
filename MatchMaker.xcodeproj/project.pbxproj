@@ -11,6 +11,7 @@
 		73D4EA221C5F2B36006B08BB /* login_with_facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 73D4EA211C5F2B36006B08BB /* login_with_facebook.png */; };
 		73D4EA261C5F33A4006B08BB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4EA251C5F33A4006B08BB /* SignUpViewController.swift */; };
 		73D4EA2C1C5F7F3F006B08BB /* SwipingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4EA2B1C5F7F3F006B08BB /* SwipingViewController.swift */; };
+		73DE923D1C6096F1007A9CAF /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DE923C1C6096F1007A9CAF /* ContactsTableViewController.swift */; };
 		73DE94B01C58967D004637D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DE94AF1C58967D004637D0 /* AppDelegate.swift */; };
 		73DE94B21C58967D004637D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DE94B11C58967D004637D0 /* ViewController.swift */; };
 		73DE94B51C58967D004637D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73DE94B31C58967D004637D0 /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		73D4EA211C5F2B36006B08BB /* login_with_facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_with_facebook.png; sourceTree = "<group>"; };
 		73D4EA251C5F33A4006B08BB /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = ../SignUpViewController.swift; sourceTree = "<group>"; };
 		73D4EA2B1C5F7F3F006B08BB /* SwipingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipingViewController.swift; sourceTree = "<group>"; };
+		73DE923C1C6096F1007A9CAF /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		73DE94AC1C58967D004637D0 /* MatchMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatchMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73DE94AF1C58967D004637D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73DE94B11C58967D004637D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				73DE94B11C58967D004637D0 /* ViewController.swift */,
 				73D4EA251C5F33A4006B08BB /* SignUpViewController.swift */,
 				73D4EA2B1C5F7F3F006B08BB /* SwipingViewController.swift */,
+				73DE923C1C6096F1007A9CAF /* ContactsTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 			files = (
 				73D4EA261C5F33A4006B08BB /* SignUpViewController.swift in Sources */,
 				73DE94B21C58967D004637D0 /* ViewController.swift in Sources */,
+				73DE923D1C6096F1007A9CAF /* ContactsTableViewController.swift in Sources */,
 				73D4EA2C1C5F7F3F006B08BB /* SwipingViewController.swift in Sources */,
 				73DE94B01C58967D004637D0 /* AppDelegate.swift in Sources */,
 			);

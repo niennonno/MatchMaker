@@ -23,12 +23,15 @@ class SignUpViewController: UIViewController {
         } catch {
         }
         
+        self.performSegueWithIdentifier("loggingIn", sender: self)
+        
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let graphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, gender"])
+        let graphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, gender,email"])
         graphRequest.startWithCompletionHandler { (connection, result, error) -> Void in
             
             if error != nil {
@@ -39,7 +42,8 @@ class SignUpViewController: UIViewController {
                     
                     PFUser.currentUser()?["gender"] = result["gender"]
                     PFUser.currentUser()?["name"] = result["name"]
-                    
+                    PFUser.currentUser()?["email"] = result["email"]
+
                     do { try PFUser.currentUser()?.save()
                     } catch {
                     }
